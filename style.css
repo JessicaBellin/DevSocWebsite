@@ -93,7 +93,7 @@ nav ul li a:hover, .section-box h2:hover{
     padding:14px 70px;
     border-radius:50px;
     margin-top:20px;
-    transition:background-color 0.4s, color 0.4s;
+    transition:background-color 0.2s, color 0.2s;
 }
 
 .welcome-page a:hover{
@@ -199,6 +199,13 @@ nav ul li a:hover, .section-box h2:hover{
 #my-unsw-journey-so-far,
 #my-links{
     scroll-margin-top:100px; 
+}
+
+.copy-username{
+    display:none;
+    color:white;
+    font-size:16px;
+    margin-top:10px;
 }
 
 @media(max-width: 868px){

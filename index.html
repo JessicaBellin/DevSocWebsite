@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jessica's Website</title>
         <link rel="stylesheet" href="style.css">
@@ -34,30 +35,30 @@
         <div class="content-container">
             <div class="section-box section-aboutme">
                 <h2 id="about-me">ABOUT ME</h2>
-                <p>Hi! My name is Jessica Bellin, you can call me “Jess”. I'm 18 years old. Currently, I'm starting my second year, studying bachelors of computer science. I did my first year studies in UNSW's diploma program so that's probably why you haven’t seen me around campus (yet!).</p>
+                <p>Hi! My name is Jessica Bellin, you can call me Jess. I'm 18 years old. Currently, I'm starting my second year, studying bachelors of computer science. I did my first year studies in UNSW's diploma program as an international student!</p>
             </div>
     
             <div class="section-box section-myfunfacts">
                 <h2 id="my-fun-facts">MY FUN FACTS</h2>
                 <ul>
-                    <li>🇮🇩 I’m from Jakarta, Indonesia.</li>
-                    <li>⚽️ I’m a huge men and women's football fan (also known as soccer to some 🤫) since 2021. Ever since then, I started to support the Arsenal!</li>
+                    <li>🇮🇩 I'm from Jakarta, Indonesia.</li>
+                    <li>⚽️ I'm a huge men and women's football fan (also known as soccer to some 🤫) since 2021. Ever since then, I have started supporting Arsenal!</li>
                     <li>🎾 Recently, I had just started watching women's tennis as well!</li>
                 </ul>
             </div>
     
             <div class="section-box section-journey">
                 <h2 id="my-unsw-journey-so-far">MY UNSW JOURNEY SO FAR</h2>
-                <p>I actually went into my first year without any prior knowledge or experience about programming. So far, I have learned C, MIPS and Javascript (and also self-taught HTML/CSS for week or so to make this website so forgive me for any mistakes!). I have been really enjoying my time in UNSW and Sydney so far. For me, studying computer science has been a challenging journey but it has also pushed me to be more motivated and I can't wait to learn more stuff!</p>
+                <p>I actually went into my first year without any prior knowledge or experience about programming. So far, I have learned C, MIPS and Javascript (and also self-taught HTML/CSS for week or so to make this website so forgive me for any mistakes!). I have been really enjoying my time in UNSW and Sydney so far. For me, studying computer science has been a challenging journey but it has also pushed me to be more motivated and I can't wait to learn more in the future!</p>
             </div>
             
             <div class="section-box section-mylinks">
                 <h2 id="my-links">MY LINKS</h2>
                 <ul>
-                    <li><a href="#"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
-                    <li><a href="#"><i class="fab fa-spotify"></i> <span>Spotify</span></a></li>
+                    <li><a href="#" id="discord-link"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                    <li><a href="https://open.spotify.com/user/uyt4xpbntgdwpwafowkovltkn?si=52832afcefdb4640"><i class="fab fa-spotify"></i> <span>Spotify</span></a></li>
                 </ul>
+                <span id="copy-username" class="copy-username">Discord username copied!</span>
             </div>
         </div>
 
@@ -67,6 +68,31 @@
         
             menuIcon.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const discordLink = document.getElementById('discord-link');
+                const copyMessage = document.getElementById('copy-username');
+                const username = 'jessbelln'; 
+
+                discordLink.addEventListener('click', (event) => {
+                    event.preventDefault(); 
+                    
+                    // Copy username to clipboard
+                    navigator.clipboard.writeText(username).then(() => {
+                        // Show the "username copied" message
+                        copyMessage.style.display = 'inline';
+
+                        // Hide the message after 2 seconds
+                        setTimeout(() => {
+                            copyMessage.style.display = 'none';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                });
             });
         </script>
     </body>
