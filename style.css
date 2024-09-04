@@ -247,38 +247,61 @@ nav ul li a:hover, .section-box h2:hover{
 @media(max-width:480px){
     body{
         font-size:12px; 
+        background-attachment: scroll;
+        background-size: auto 100%;
     }
 
     .welcome-page h1{
         font-size:40px; 
     }
 
+    .section-box {
+        width:90%; 
+        max-width:none; 
+        padding:10px;
+    }
+
     .section-box h2{
-        font-size:25px;
+        font-size:20px;
     }
 
     .section-box p,
     .section-box ul li{
-        font-size:18px; 
+        font-size:16px; 
     }
 
     .welcome-page a,
     .section-box a{
-        font-size:18px;
-        padding:8px 40px; 
+        font-size:16px;
+        padding:8px 20px; 
     }
 
     nav{
-        padding:10px 5%;
+        padding:5px 2%;
     }
 
     .nav-links{
-        padding:10px 15px;
+        padding:10px;
+        width:100%;
         width:200px;
+    }
+
+    .nav-links ul{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        padding:0;
     }
 
     .nav-links ul li{
         margin:5px 0;
-        font-size:18px;
+        font-size:14px;
+    }
+
+    .copy-username{
+        font-size:14px;
+        padding:5px;
+        top:10px;
+        right:10px;
     }
 }
