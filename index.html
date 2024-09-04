@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jessica's Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="main-page">
+            <nav id="navbar">
+                <div class="nav-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#about-me">ABOUT ME</a></li>
+                        <li><a href="#my-fun-facts">MY FUN FACTS</a></li>
+                        <li><a href="#my-unsw-journey-so-far">MY UNSW JOURNEY SO FAR</a></li>
+                        <li><a href="#my-links">MY LINKS</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="welcome-page">
+                <h1>Welcome to Jessica's page!</h1>
+                <a href="#about-me">Scroll to discover more</a>
+            </div>
+        </div>  
+
+        <div class="content-container">
+            <div class="section-box section-aboutme">
+                <h2 id="about-me">ABOUT ME</h2>
+                <p>Hi! My name is Jessica Bellin, you can call me “Jess”. I'm 18 years old. Currently, I'm starting my second year, studying bachelors of computer science. I did my first year studies in UNSW's diploma program so that's probably why you haven’t seen me around campus (yet!).</p>
+            </div>
+    
+            <div class="section-box section-myfunfacts">
+                <h2 id="my-fun-facts">MY FUN FACTS</h2>
+                <ul>
+                    <li>🇮🇩 I’m from Jakarta, Indonesia.</li>
+                    <li>⚽️ I’m a huge men and women's football fan (also known as soccer to some 🤫) since 2021. Ever since then, I started to support the Arsenal!</li>
+                    <li>🎾 Recently, I had just started watching women's tennis as well!</li>
+                </ul>
+            </div>
+    
+            <div class="section-box section-journey">
+                <h2 id="my-unsw-journey-so-far">MY UNSW JOURNEY SO FAR</h2>
+                <p>I actually went into my first year without any prior knowledge or experience about programming. So far, I have learned C, MIPS and Javascript (and also self-taught HTML/CSS for week or so to make this website so forgive me for any mistakes!). I have been really enjoying my time in UNSW and Sydney so far. For me, studying computer science has been a challenging journey but it has also pushed me to be more motivated and I can't wait to learn more stuff!</p>
+            </div>
+            
+            <div class="section-box section-mylinks">
+                <h2 id="my-links">MY LINKS</h2>
+                <ul>
+                    <li><a href="#"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
+                    <li><a href="#"><i class="fab fa-spotify"></i> <span>Spotify</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            const menuIcon = document.querySelector('.nav-icon');
+            const navLinks = document.querySelector('.nav-links');
+        
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

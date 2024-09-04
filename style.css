@@ -1,0 +1,277 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Bangers', cursive;
+}
+
+body{
+    margin:0;
+    background-image:url('images/background.gif');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed; /*background is fixed when scrolled down*/
+    background-repeat:no-repeat;
+}
+
+.main-page{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center; 
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+    z-index:1;
+}
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    right:1;
+    padding:20px 4%;
+    display:flex;
+    justify-content:flex-end;
+}
+
+#navbar{
+    background-color:#1e2124;
+    z-index:10;
+}
+
+nav ul{
+    display:flex;
+}
+
+nav ul li{
+    list-style:none;
+    margin-left:40px;
+    color:#7289da;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#7289da;
+    font-size:25px;
+    /*set up border for each navbar*/
+    border:2px solid white;
+    padding:5px 15px;
+    border-radius:5px;
+}
+
+nav ul li a:hover, .section-box h2:hover{
+    -webkit-text-stroke:1px #7289da;
+    color:transparent;
+    border-color:transparent;
+}
+
+.welcome-page{
+    z-index:0;
+}
+
+.welcome-page h1{
+    font-size:100px;
+    font-weight:600;
+    margin-bottom:20px;
+    transition:0.5s;
+}
+
+.welcome-page h1:hover{
+    -webkit-text-stroke:2px white;
+    color:transparent;
+}
+
+.welcome-page a{
+    text-decoration:none;
+    display:inline-block;
+    color:white;
+    font-size:24px;
+    border:2px solid white;
+    padding:14px 70px;
+    border-radius:50px;
+    margin-top:20px;
+    transition:background-color 0.4s, color 0.4s;
+}
+
+.welcome-page a:hover{
+    background-color:white;
+    color:#1e2124;
+}
+
+.content-container{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:transparent;
+}
+
+.section-box{
+    width:60%;
+    max-width:600px; 
+    margin-bottom:20px; 
+    padding:10px 50px;
+    background:#1e2124; 
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.section-box h2{
+    margin-bottom:15px;
+    color:#7289da;
+    text-align:center; 
+    font-size:40px;
+    border:2px solid transparent; 
+    padding:5px 15px; 
+    transition:0.2s ease-in-out; 
+}
+
+.section-aboutme p, .section-journey p{
+    color:white;
+    font-size:25px;
+    font-family:'Inconsolata', monospace;
+    line-height:1.8;
+    margin-bottom:0;
+}
+
+.section-myfunfacts ul li{
+    list-style:none;
+    padding:0;
+    font-size:25px;
+    font-family:'Inconsolata', monospace; 
+    color:white; 
+    text-align:left; 
+    margin-bottom:10px;
+}
+
+.section-mylinks ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom:10px;
+}
+
+.section-mylinks ul li{
+    font-size:25px; 
+    color:white; 
+}
+
+.section-mylinks ul li a{
+    text-decoration:none;
+    color:white; 
+    display:flex;
+    align-items:center;
+    gap:10px; 
+}
+
+.section-mylinks ul li a:hover span{
+    text-decoration:underline;
+}
+
+.section-mylinks ul li i{
+    font-size:25px;
+}
+
+.nav-icon{
+    display:none; /*at first hidden, then will show in smaller screens*/
+    font-size:30px;
+    color:#7289da;
+    cursor:pointer;
+    position:absolute;
+    top:20px;
+    right:8%;
+    z-index:10;
+}
+
+.nav-links{
+    display:flex;
+}
+
+#about-me,
+#my-fun-facts,
+#my-unsw-journey-so-far,
+#my-links{
+    scroll-margin-top:100px; 
+}
+
+@media(max-width: 868px){
+    .nav-icon{
+        display:block; 
+    }
+
+    .nav-links{
+        display:none; 
+        position:absolute;
+        top:60px;
+        right:8%;
+        background-color:#1e2124; 
+        width:300px;
+        padding:10px 20px;
+        border-radius:10px;
+        z-index:10;
+    }
+
+    #navbar{
+        background-color:transparent;
+    }
+
+    .nav-links ul{
+        flex-direction:column; 
+    }
+
+    .nav-links ul li{
+        margin:10px 0; 
+        margin-bottom:20px;
+    }
+
+    .nav-links.active{
+        display:flex; 
+        flex-direction:column;
+    }
+}
+
+@media(max-width:480px){
+    body{
+        font-size:12px; 
+    }
+
+    .welcome-page h1{
+        font-size:40px; 
+    }
+
+    .section-box h2{
+        font-size:25px;
+    }
+
+    .section-box p,
+    .section-box ul li{
+        font-size:18px; 
+    }
+
+    .welcome-page a,
+    .section-box a{
+        font-size:18px;
+        padding:8px 40px; 
+    }
+
+    nav{
+        padding:10px 5%;
+    }
+
+    .nav-links{
+        padding:10px 15px;
+        width:200px;
+    }
+
+    .nav-links ul li{
+        margin:5px 0;
+        font-size:18px;
+    }
+}
